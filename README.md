@@ -68,7 +68,7 @@ Il ne doit pas être utilisé par des utilisateurs standards.
 
 4. Aller dans :
 
-   **Administration > Plugins**
+   **Administration > Etendre ILIAS > Plugins**
 
 5. Installer le plugin **SwitchUser**.
 
@@ -80,7 +80,7 @@ Il ne doit pas être utilisé par des utilisateurs standards.
 
 Une fois le plugin activé, l’accès se fait depuis :
 
-**Administration > Plugins > SwitchUser > Configurer**
+**Administration > Etendre ILIAS > Plugins > SwitchUser > Configurer**
 
 ---
 
