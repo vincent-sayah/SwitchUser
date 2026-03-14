@@ -1,10 +1,10 @@
-# SwitchUser  -ILIAS 10
+# SwitchUser - ILIAS 10
 
 ## Présentation
 
 **SwitchUser** est un plugin pour **ILIAS 10** permettant à un administrateur autorisé de se connecter temporairement avec l’identité d’un autre utilisateur.
 
-Ce plugin est destiné aux opérations de **support**, de **diagnostic**, de **vérification des droits** et d’**assistance fonctionnelle**. Il permet également de revenir simplement au compte d’origine grâce à un lien de restauration affiché pendant l’impersonation.
+Ce plugin est destiné aux opérations de **support**, de **diagnostic**, de **vérification des droits** et d’**assistance fonctionnelle**. Il permet également de revenir simplement au compte d’origine grâce à un lien de restauration affiché pendant la bascule de compte.
 
 ---
 
@@ -12,7 +12,7 @@ Ce plugin est destiné aux opérations de **support**, de **diagnostic**, de **v
 
 - Recherche d’un utilisateur par login, nom ou adresse e-mail
 - Bascule temporaire vers le compte sélectionné
-- Utilisation réelle des droits du compte impersonné
+- Utilisation réelle des droits du compte ciblé
 - Retour rapide et sécurisé au compte administrateur d’origine
 - Interface simple intégrée à l’administration des plugins ILIAS
 
@@ -52,7 +52,7 @@ Il ne doit pas être utilisé par des utilisateurs standards.
 
 ## Installation
 
-1. Copier le dossier du plugin dans le répertoire suivant et donner les droits utilisateur web:
+1. Copier le dossier du plugin dans le répertoire suivant et donner les droits à l’utilisateur web :
 
    ```text
    public/Customizing/global/plugins/Services/UIComponent/UserInterfaceHook/SwitchUser
@@ -92,7 +92,7 @@ L’écran de configuration permet principalement de :
 
 - rechercher un utilisateur ;
 - afficher les résultats dans un tableau ;
-- lancer l’impersonation sur le compte choisi.
+- lancer la bascule sur le compte choisi.
 
 ---
 
@@ -114,11 +114,11 @@ Dans le tableau des résultats :
 2. cliquer sur le bouton d’action correspondant ;
 3. la session bascule alors sur le compte sélectionné.
 
-À partir de cet instant, vous naviguez dans ILIAS avec les **droits réels** de l’utilisateur impersonné.
+À partir de cet instant, vous naviguez dans ILIAS avec les **droits réels** de l’utilisateur ciblé.
 
 ### 3. Revenir au compte d’origine
 
-Pendant l’impersonation, un message est affiché dans l’interface indiquant qu’une bascule est active.
+Pendant la bascule de compte, un message est affiché dans l’interface indiquant qu’une bascule est active.
 
 Pour revenir au compte initial :
 
@@ -129,10 +129,10 @@ Pour revenir au compte initial :
 
 ## Comportement attendu
 
-Lorsque l’impersonation est active :
+Lorsque la bascule de compte est active :
 
 - le compte administrateur d’origine est temporairement suspendu ;
-- seules les permissions du compte impersonné s’appliquent ;
+- seules les permissions du compte ciblé s’appliquent ;
 - les droits d’administration ne sont pas conservés pendant la bascule ;
 - le retour au compte initial reste possible via le lien prévu à cet effet.
 
@@ -145,7 +145,7 @@ L’utilisation de SwitchUser doit être strictement réservée aux personnes au
 Il est recommandé de :
 
 - utiliser le plugin uniquement pour des besoins légitimes de support ou de contrôle ;
-- éviter toute action non nécessaire pendant l’impersonation ;
+- éviter toute action non nécessaire pendant la bascule ;
 - revenir au compte d’origine dès la fin de l’intervention ;
 - intégrer l’usage du plugin dans les règles internes de sécurité et de traçabilité ;
 - informer les utilisateurs si votre politique interne l’exige.
@@ -154,9 +154,9 @@ Il est recommandé de :
 
 ## Limitations
 
-- Le plugin repose sur un mécanisme d’impersonation de session.
-- Les actions réalisées pendant la bascule sont effectuées dans le contexte du compte impersonné.
-- Si l’utilisateur ciblé ne possède pas un accès ou un droit particulier, l’administrateur ne l’aura pas non plus durant l’impersonation.
+- Le plugin repose sur un mécanisme de bascule de session.
+- Les actions réalisées pendant la bascule sont effectuées dans le contexte du compte ciblé.
+- Si l’utilisateur ciblé ne possède pas un accès ou un droit particulier, l’administrateur ne l’aura pas non plus durant la bascule.
 - Le plugin ne remplace pas une politique de gestion des habilitations ni un dispositif d’audit organisationnel.
 
 ---
@@ -169,11 +169,11 @@ Vérifier que la recherche porte sur un login, un nom ou une adresse e-mail exis
 
 ### La bascule fonctionne mais l’utilisateur ne voit pas certains contenus
 
-Vérifier les rôles, permissions et affectations du compte impersonné dans ILIAS.
+Vérifier les rôles, permissions et affectations du compte ciblé dans ILIAS.
 
 ### Le lien de retour n’apparaît pas
 
-Vérifier que l’impersonation est bien active et que le plugin est correctement installé et activé.
+Vérifier que la bascule de compte est bien active et que le plugin est correctement installé et activé.
 
 ### Le plugin n’apparaît pas dans ILIAS
 
@@ -198,7 +198,7 @@ En cas de mise à jour du plugin :
    ```
 
 4. vérifier l’état du plugin dans l’administration ILIAS ;
-5. tester la recherche, l’impersonation et le retour au compte d’origine.
+5. tester la recherche, la bascule et le retour au compte d’origine.
 
 ---
 
