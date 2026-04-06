@@ -1,8 +1,8 @@
-# SwitchUser SSI - ILIAS 10
+# SwitchUser - ILIAS 10
 
-Version corrigée et durcie du plugin SwitchUser.
+Version 2.0.0 corrigée et durcie du plugin SwitchUser.
 
-## Principales corrections SSI
+## Principales corrections
 
 - abandon des actions de bascule en GET au profit d'actions POST ;
 - ajout d'un jeton CSRF côté session ;
@@ -11,7 +11,8 @@ Version corrigée et durcie du plugin SwitchUser.
 - refus de basculer vers un compte administrateur ;
 - suppression des fichiers de sauvegarde `.bak` ;
 - validation stricte des identifiants utilisateurs ;
-- bannière persistante avec bouton de retour sécurisé.
+- bannière persistante avec bouton de retour sécurisé;
+- ajout d’un accès rapide visible dans l’interface pour les administrateurs.
 
 ## Emplacement
 
