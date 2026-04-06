@@ -26,7 +26,7 @@ msg_already_impersonating#:#Une session de bascule est déjà active.
 msg_not_impersonating#:#Aucune session de bascule n’est actuellement active.
 msg_admin_target_forbidden#:#SwitchUser refuse la bascule vers un compte administrateur.
 admin_menu_title#:#SwitchUser
-admin_menu_hint#:#Page d’administration renforcée.
+admin_menu_hint#:#Page d’administration.
 nav_mainmenu_title#:#Accès rapide SwitchUser
 nav_mainmenu_hint#:#Ouvrir l’interface SwitchUser depuis le menu latéral
 
